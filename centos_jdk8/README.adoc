@@ -1,0 +1,7 @@
+= Docker Image testing Demos
+
+Docker image testing using https://github.com/aelsabbahy/goss[goss]
+
+https://github.com/aelsabbahy/goss/blob/master/docs/manual.md[goss documentation]
+
+Docker goss (dgoss) https://github.com/aelsabbahy/dgoss-examples/blob/master/nginx/goss.yaml[examples]
