@@ -4,16 +4,6 @@ package:
   podman:
     installed: true
 command:
-  native-image --version:
-    exit-status: 0
-    stdout:
-      - "GraalVM Version 1.0.0-rc13"
-  java -version:
-    exit-status: 0
-    stderr:
-      - "1.8.0_202"
-      - "OpenJDK GraalVM CE 1.0.0-rc13"
-    timeout: 1000
   echo "$GRAALVM_HOME":
     exit-status: 0
     stdout:
@@ -22,3 +12,12 @@ command:
     exit-status: 0
     stdout:
       - "/opt/graalvm"
+  /opt/graalvm/bin/native-image --version:
+    exit-status: 0
+    stdout:
+      - "GraalVM Version 1.0.0-rc13"
+  /opt/graalvm/bin/java -version:
+    exit-status: 0
+    stderr:
+      - "1.8.0_202"
+      - "OpenJDK GraalVM CE 1.0.0-rc13"

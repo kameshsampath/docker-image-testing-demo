@@ -9,7 +9,12 @@ export PULL=${PULL:-true}
 for d in */
 do
   pushd $d > /dev/null
-  [[ -f ./test.sh ]] &&  echo "Running $d Tests " && ./test.sh  
+  if [ -f ./test.sh ];
+  then
+    echo  -e "Running $d Tests \n" 
+    ./test.sh && ((i++))  
+    echo -e "\n\n" 
+  fi
   popd > /dev/null
 done;
 

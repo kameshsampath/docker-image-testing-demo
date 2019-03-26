@@ -1,8 +1,9 @@
 gossfile:
+   /base/goss.yaml: {}
    /base/maven.yaml: {}
 file:
   /root/.m2/settings.xml:
-    exists: true
+    exists: false
     filetype: file
     contains:
       - "<!-- ### configured mirrors ### -->"

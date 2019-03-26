@@ -10,6 +10,6 @@ then
 fi
 
 i=0
-time dgoss run -e MAVEN_MIRROR_URL="http://example.com" quay.io/quarkus/centos-quarkus-maven:graalvm-1.0.0-rc13 || ((i++))
+time dgoss run -v "$_CURR_DIR/../base":/base -e MAVEN_MIRROR_URL="http://example.com" quay.io/quarkus/centos-quarkus-maven:graalvm-1.0.0-rc13 || ((i++))
 
 exit $i
