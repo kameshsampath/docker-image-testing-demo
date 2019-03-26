@@ -1,0 +1,10 @@
+gossfile:
+   /base/maven.yaml: {}
+file:
+  /root/.m2/settings.xml:
+    exists: true
+    filetype: file
+    contains:
+      - "<!-- ### configured mirrors ### -->"
+      - "<host>{{getEnv "HTTP_PROXY_HOST"}}</host><port>{{getEnv "HTTP_PROXY_PORT"}}</port>"
+      - "<activeProfile>securecentral</activeProfile>"

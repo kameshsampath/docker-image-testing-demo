@@ -1,0 +1,10 @@
+gossfile:
+  /base/maven.yaml: {}
+file:
+  /root/.m2/settings.xml:
+    exists: true
+    filetype: file
+    contains:
+      - "<url>http://example.com</url>"
+      - "<!-- ### configured http proxy ### -->"
+      - "<activeProfile>securecentral</activeProfile>"
