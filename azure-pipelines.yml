@@ -12,7 +12,7 @@ pool:
 container: centos:7
 
 steps:
-  - script: curl -L https://goss.rocks/install | sudo sh
+  - script: curl -L https://goss.rocks/install | sh
     displayName: "Install goss"
 
   - task: ShellScript@2
