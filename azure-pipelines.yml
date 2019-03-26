@@ -12,11 +12,10 @@ pool:
 steps:
   - script: curl -L https://goss.rocks/install | sudo sh
     displayName: "Install goss"
- 
+
   - task: ShellScript@2
     inputs:
-      scriptPath: ./test-suite.sh
-    env: 
+      scriptPath: test-suite.sh
+    env:
       PULL: true
     name: "Run_Test_Suite"
-    
