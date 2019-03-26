@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: "Ubuntu-16.04"
 
-container: ubuntu:16.04
+container: centos:7
 
 steps:
   - script: curl -L https://goss.rocks/install | sudo sh
