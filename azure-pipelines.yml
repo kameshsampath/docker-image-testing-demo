@@ -13,9 +13,10 @@ steps:
   - script: curl -L https://goss.rocks/install | sudo sh
     displayName: "Install goss"
  
-  - task:  "Run Test Suite"
+  - task: ShellScript@2
     inputs:
       scriptPath: ./test-suite.sh
-    env:
+    env: 
       PULL: true
+    name: "Run_Test_Suite"
     
