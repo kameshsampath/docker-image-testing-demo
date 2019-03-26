@@ -9,6 +9,8 @@ trigger:
 pool:
   vmImage: "Ubuntu-16.04"
 
+contianer: ubuntu:16.04
+
 steps:
   - script: curl -L https://goss.rocks/install | sudo sh
     displayName: "Install goss"
@@ -18,5 +20,4 @@ steps:
       scriptPath: ./centos-quarkus-maven/test-suite.sh
     env:
       PULL: true
-      GOSS_SLEEP: 10
     name: "Quarkus_Images_Testing"
